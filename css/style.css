@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    margin: 0px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* background: url('../images/pattern-bg.svg') 680px 52px no-repeat; */
+    background-image: url(../images/pattern-bg.svg), url(../images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: 680px 52px, 0px 100%;
+    background-size: 630px;
+}
+.container .wrapper {
+    width: 960px;
+    margin: auto;
+}
+
+.content {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: inline-block;
+    margin-top: 120px;
+}
+.content .img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+    box-shadow: 10px 10px 30px rgba(0,0,0, 0.18);
+}
+.content .img img {
+    width: 100%;
+}
+
+.content .info {
+    position: absolute;
+    width: 65%;
+    padding-top: 50px;
+    margin-top: 85px;
+    z-index: 10;
+    background: url('../images/pattern-quotes.svg') 70px -18px no-repeat;
+}
+.content .info p {
+    font-weight: 300;
+    font-size: 23px;
+}
+.content .info .short {
+    font-size: 17px;
+    color: hsl(240, 18%, 77%);
+}
+.content .info .short span {
+    color: hsl(240, 38%, 20%);
+    font-weight: 700;
+}
+
+.arrows {
+    position: absolute;
+    bottom: -17px;
+    right: 280px;
+    z-index: 6;
+}
+.arrows .next,
+.arrows .prev {
+    float: left;
+    height: 30px;
+    background-color: white;
+    padding: 2px 10px;
+}
+.arrows .next img,
+.arrows .prev img {
+    display: block;
+    width: 10px;
+    margin-top: 8px;
+}
+.arrows .next {
+    padding-left: 15px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+.arrows .prev {
+    padding-right: 15px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        height: auto;
+        background-position: -80px 50px, 0 116%;
+        /* background-position-x: -80px;
+        background-position-y: 50px;     */
+    }
+    
+    .container .wrapper {
+        width: 90%;
+    }
+
+    .content {
+        height: auto;
+    }
+
+    .content .img {
+        position: relative;
+        top: auto;
+        width: auto;
+        height: 390px;
+        overflow: hidden;
+    }
+    .content .img img {
+        width: auto;
+        height: 100%;
+    }
+
+    .arrows {
+        /* bottom: -8px; */
+        top: 44%;
+        bottom: auto;
+        right: 40%;
+    }
+
+    .content .info {
+        position: relative;
+        width: 100%;
+        margin-bottom: 60px;
+        margin-top: 65px;
+        text-align: center;
+        background-position-x: 50%;
+    }
+
+    .content .info .short span {
+        display: block;
+    }
+}
